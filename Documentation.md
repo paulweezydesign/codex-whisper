@@ -1,47 +1,55 @@
 # Documentation.md
 
 ## Current status
+
 - **Current milestone:** Not started
-- **Overall progress:** 0%
+- **State:** Not started
 - **Last updated:** <date/time>
 
 ## Milestone log
 
 ### M1 — Foundation
-- Status: Not started
-- Summary:
-  - <pending>
-- Validation:
-  - <not run>
+
+- **Status:** Not started
+- **Summary:** <pending>
+- **Validation:** <not run>
 
 ### M2 — Core capability
-- Status: Not started
-- Summary:
-  - <pending>
-- Validation:
-  - <not run>
 
-### M3 — Hardening + handoff
-- Status: Not started
-- Summary:
-  - <pending>
-- Validation:
-  - <not run>
+- **Status:** Not started
+- **Summary:** <pending>
+- **Validation:** <not run>
+
+### M3 — Hardening and handoff
+
+- **Status:** Not started
+- **Summary:** <pending>
+- **Validation:** <not run>
 
 ## Decisions and rationale
-- <decision 1>
-- <decision 2>
+
+- YYYY-MM-DD: <decision and rationale>
 
 ## How to run
+
 ```bash
-./checks/validate.sh
+./checks/validate.sh <target>
 ```
 
-## Smoke test checklist
-- [ ] <smoke test 1>
-- [ ] <smoke test 2>
-- [ ] <smoke test 3>
+Starter targets are `foundation`, `core`, `release`, and `all`. Replace their placeholder logic with the concrete commands defined in `Plan.md`.
 
-## Known issues / follow-ups
-- <follow-up 1>
-- <follow-up 2>
+## Validation history
+
+- YYYY-MM-DD HH:MM UTC
+  - **Command:** <command>
+  - **Result:** PASS/FAIL
+  - **Notes:** <notes>
+
+## Known issues and follow-ups
+
+- [ ] <follow-up 1>
+- [ ] <follow-up 2>
+
+## Next actions
+
+1. <next action>

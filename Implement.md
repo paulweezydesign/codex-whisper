@@ -1,32 +1,37 @@
 # Implement.md
 
-## Execution runbook
+## Mission
 
-Follow this process strictly:
+Execute work against `Prompt.md` by following `Plan.md` milestone by milestone.
 
-1. Treat `Prompt.md` as product/source-of-truth requirements.
-2. Treat `Plan.md` as source-of-truth sequencing and acceptance criteria.
-3. Work one milestone at a time.
-4. Keep diffs scoped to the current milestone only.
-5. Run milestone validation commands after each milestone.
-6. If validation fails, repair immediately before continuing.
-7. Update `Documentation.md` continuously (status, decisions, commands run, results).
-8. Commit in coherent units with clear messages.
+## Source of truth
 
-## Scope control rules
-- Do not add features outside current milestone acceptance criteria.
+1. `Prompt.md` defines what to build.
+2. `Plan.md` defines milestone sequence, acceptance criteria, and validation.
+3. `Implement.md` defines execution behavior.
+4. `Documentation.md` is the running memory and audit log.
+
+## Standard loop
+
+1. Restate the current milestone and acceptance criteria.
+2. Implement the smallest complete increment.
+3. Run the validation commands defined for the milestone.
+4. Fix failures before starting new work.
+5. Update `Documentation.md` with status, decisions, validation results, and the next action.
+6. Repeat until the milestone is accepted.
+
+## Scope control
+
+- Work on one milestone at a time.
+- Keep diffs scoped to the current milestone.
 - Do not refactor unrelated code.
-- Record deferred work in `Documentation.md` under follow-ups.
-
-## Reporting expectations
-After each milestone, append in `Documentation.md`:
-- What changed
-- Validation commands executed and outcomes
-- Decisions and tradeoffs
-- Next milestone and blockers (if any)
+- Do not broaden scope without recording the reason and requesting approval.
+- Record deferred work in `Documentation.md`.
 
 ## Completion criteria
-Only mark project complete when:
+
+Only mark the project complete when:
+
 - All milestones in `Plan.md` are complete.
-- Final validation commands are green.
+- Final validation commands pass.
 - `Documentation.md` includes run/demo instructions and known issues.
