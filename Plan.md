@@ -1,68 +1,83 @@
 # Plan.md
 
+> Source of truth for execution milestones. Keep each milestone small enough to complete in one focused loop.
+
 ## Planning rules
 
-- Keep milestones small enough to finish in one coherent loop.
-- Every milestone must include explicit acceptance criteria.
-- Every milestone must include concrete validation commands.
-- If validation fails, fix before continuing.
-- Record major design decisions to prevent oscillation.
+- Give every milestone explicit acceptance criteria.
+- Define concrete, project-appropriate validation commands.
+- Implement those commands in `checks/validate.sh` or invoke them directly.
+- Stop and fix failures before continuing.
+- Record major design decisions to prevent drift.
 
-## Milestone backlog
+## Architecture intent
 
-### M0 — Repository setup
+- <high-level architecture>
+- <major components>
+- <interfaces/contracts>
 
-**Scope**
+## Milestones
 
-- Initialize structure, tooling, and baseline docs.
+### M1 — Foundation
 
-**Acceptance criteria**
+**Objective**
 
-- Repo skeleton present.
-- Baseline verification script runs.
-
-**Validation commands**
-
-- `bash commands/verify.sh`
-
----
-
-### M1 — First vertical slice
-
-**Scope**
-
-- Implement smallest end-to-end use case.
+- <what this milestone achieves>
 
 **Acceptance criteria**
 
-- User can complete one primary workflow.
-- Tests cover primary path.
+- [ ] <criterion 1>
+- [ ] <criterion 2>
 
 **Validation commands**
 
-- `bash commands/verify.sh`
+```bash
+./checks/validate.sh foundation
+```
 
----
+### M2 — Core capability
 
-### M2 — Hardening + edge cases
+**Objective**
 
-**Scope**
-
-- Error handling, resiliency, and known edge cases.
+- <what this milestone achieves>
 
 **Acceptance criteria**
 
-- Key edge cases covered by tests.
-- Logging and observability in place.
+- [ ] <criterion 1>
+- [ ] <criterion 2>
 
 **Validation commands**
 
-- `bash commands/verify.sh`
+```bash
+./checks/validate.sh core
+```
 
-## Architecture notes
+### M3 — Hardening and handoff
 
-- Add module boundaries and rationale here.
+**Objective**
 
-## Decision log
+- <what this milestone achieves>
 
-- YYYY-MM-DD: Decision placeholder.
+**Acceptance criteria**
+
+- [ ] <criterion 1>
+- [ ] <criterion 2>
+
+**Validation commands**
+
+```bash
+./checks/validate.sh release
+```
+
+## Decisions
+
+- YYYY-MM-DD: <decision and rationale>
+
+## Stop-and-fix rule
+
+If validation fails:
+
+1. Stop new scope expansion.
+2. Fix the failure.
+3. Re-run the validation commands.
+4. Continue only after all checks pass.

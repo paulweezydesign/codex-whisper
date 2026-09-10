@@ -1,53 +1,48 @@
 # Long-Horizon Codex Skeleton
 
-This repository is a starter scaffold inspired by OpenAI's article **"Run long horizon tasks with Codex"** (published **February 23, 2026**).
+This repository is a lightweight, language-agnostic scaffold for long-horizon Codex tasks with durable project memory.
 
-It sets up the same four-file operating system for long-running agent tasks:
+It is inspired by the OpenAI Developers article [Run long-horizon tasks with Codex](https://developers.openai.com/blog/run-long-horizon-tasks-with-codex).
 
-- `Prompt.md` — project spec and definition of done
-- `Plan.md` — milestone plan with acceptance criteria
-- `Implement.md` — execution runbook for the agent
-- `Documentation.md` — live status log and decision journal
+## Repository structure
+
+- `Prompt.md` — project goals, constraints, deliverables, and done criteria
+- `Plan.md` — milestone plan with acceptance criteria and validation commands
+- `Implement.md` — execution runbook and scope-control rules
+- `Documentation.md` — live status, decisions, validation results, and follow-ups
+- `commands/verify.sh` — baseline scaffold-integrity check
+- `checks/validate.sh` — target-aware entrypoint for project-specific checks
 
 ## Quick start
 
-1. Copy this repo for a new project.
-2. Fill in `Prompt.md` first (goals, constraints, deliverables).
-3. Break work into milestones in `Plan.md`.
-4. Keep `Implement.md` as the behavior contract for Codex.
-5. Start a task and keep `Documentation.md` updated as work progresses.
+1. Fill out `Prompt.md` with concrete project requirements.
+2. Break the work into small checkpoints in `Plan.md` and define their validation commands.
+3. Implement the corresponding checks in `checks/validate.sh`.
+4. Follow `Implement.md` and keep `Documentation.md` current as work progresses.
 
-## Suggested Codex kickoff prompt
+## Suggested kickoff prompt
 
 ```text
-Read Prompt.md as the full project spec.
-Generate and maintain a milestone-based plan in Plan.md.
-Execute work by following Implement.md.
-After each milestone, run validation commands and fix failures before moving on.
-Continuously update Documentation.md with status, decisions, and next steps.
-Do not expand scope beyond Prompt.md without explicitly logging and requesting approval.
+Read Prompt.md as the source of truth for product requirements.
+Generate or update Plan.md with milestone-sized checkpoints and concrete validation commands.
+Implement the corresponding validation logic in checks/validate.sh.
+Then execute according to Implement.md, and update Documentation.md after every milestone.
+Run the validation commands defined in Plan.md at each checkpoint. If validation fails, fix before continuing.
+Keep diffs scoped to the current milestone.
 ```
 
-## Repository layout
+## Validation
 
-```
-.
-├── Prompt.md
-├── Plan.md
-├── Implement.md
-├── Documentation.md
-├── commands/
-│   └── verify.sh
-└── .github/
-    └── pull_request_template.md
-```
-
-## Verification
-
-Use the provided script as your baseline quality gate:
+Check that the scaffold is intact:
 
 ```bash
 bash commands/verify.sh
 ```
 
-Customize it to your tech stack (`npm`, `pytest`, `go test`, etc.).
+Run milestone checks with one of the starter targets:
+
+```bash
+./checks/validate.sh <foundation|core|release|all>
+```
+
+Replace the target functions in `checks/validate.sh` with commands appropriate for the project.

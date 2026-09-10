@@ -1,50 +1,50 @@
 # Prompt.md
 
-## Project title
+## Project brief
 
-Replace with your project name.
+- **Project name:** <name>
+- **Owner:** <team/person>
+- **Primary objective:** <one sentence>
 
 ## Goals
 
-- Goal 1
-- Goal 2
-- Goal 3
+- <goal 1>
+- <goal 2>
+- <goal 3>
 
 ## Non-goals
 
-- Out-of-scope 1
-- Out-of-scope 2
+- <non-goal 1>
+- <non-goal 2>
 
 ## Hard constraints
 
-- Performance constraints:
-- Reliability constraints:
-- Security constraints:
-- UX/product constraints:
-- Platform/runtime constraints:
+- **Performance:** <constraints>
+- **Determinism/reproducibility:** <constraints>
+- **Security/privacy:** <constraints>
+- **Platform/runtime:** <constraints>
+- **Dependencies/tooling:** <constraints>
 
 ## Deliverables
 
-- [ ] Deliverable A
-- [ ] Deliverable B
-- [ ] Deliverable C
+- [ ] <deliverable 1>
+- [ ] <deliverable 2>
+- [ ] <deliverable 3>
 
-## Done when
+## Definition of done
 
-A task is complete only when all of the following are true:
-
-- [ ] Required features implemented
-- [ ] Validation commands pass
-- [ ] Documentation updated
-- [ ] Known risks and follow-ups captured
+- [ ] All deliverables meet their acceptance criteria.
+- [ ] All validation commands pass.
+- [ ] The demo flow works end-to-end.
+- [ ] Documentation covers the runbook and known limitations.
 
 ## Demo flow
 
-1. Step 1
-2. Step 2
-3. Step 3
+1. <step 1>
+2. <step 2>
+3. <step 3>
 
-## Open questions
+## Risks and open questions
 
-- Question 1
-- Question 2
+- <risk/question 1>
+- <risk/question 2>
